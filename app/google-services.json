@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1065839779454",
+    "project_id": "swift-delivery-21f21484",
+    "storage_bucket": "swift-delivery-21f21484.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1065839779454:android:b98a80d77a3471dd99822f",
+        "android_client_info": {
+          "package_name": "com.example.swiftdelivery"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFIISy-tlvJaASX-YUAdeJ4zPfDFrNv_s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
