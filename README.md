@@ -60,9 +60,9 @@ Swift/
 ### **📸 SCREENSHOTS**
 
 ![User Dashboard](screenshots/user_dashboard.jpg)
-![Delivery Agent Dashboard](screenshots/agent_dashboard.jpg)
+![Delivery Agent Dashboard](screenshots/agent_dashboard.png)
 ![User Delivery Tracking](screenshots/user_tracking.jpg)
-![Agent Route Navigation](screenshots/routenav.jpg)
+![Agent Route Navigation](screenshots/routenav.png)
 ![Live Chat between User and Delivery Agent](screenshots/livechat.jpg)
 
 ### **🧩 Future Enhancements**
