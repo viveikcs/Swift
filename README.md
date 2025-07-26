@@ -60,10 +60,10 @@ Swift/
 ### **📸 SCREENSHOTS**
 
 <img src="screenshots/user_dashboard.png" width="300" alt="User Dashboard">
-![Delivery Agent Dashboard](screenshots/agent_dashboard.png)
-![User Delivery Tracking](screenshots/user_tracking.png)
-![Agent Route Navigation](screenshots/routenav.png)
-![Live Chat between User and Delivery Agent](screenshots/livechat.png)
+<img src="screenshots/agent_dashboard.png" width="300" alt="Agent Dashboard">
+<img src="screenshots/user_tracking.png" width="300" alt="User Delivery Tracking">
+<img src="screenshots/agent_navigation.png" width="300" alt="Agent Route Navigation">
+<img src="screenshots/livechat.png" width="300" alt="Live Chat between User and Delivery Agent">
 
 ### **🧩 Future Enhancements**
 
