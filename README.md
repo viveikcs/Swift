@@ -52,7 +52,8 @@ Swift/
 
 ### **🧪 HOW TO RUN THE APP**
 
-1. Clone the Repository : ##### git clone https://github.com/viveikcs/Swift.git
+1. Clone the Repository :
+2. ##### git clone https://github.com/viveikcs/Swift.git
 3. Open the project in Android Studio
 4. Sync Gradle and build the project
 5. Run on an emulator or physical Android device
