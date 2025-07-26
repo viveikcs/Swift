@@ -3,10 +3,12 @@ package com.example.swiftdelivery.user;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -27,10 +29,9 @@ public class UserLoginActivity extends AppCompatActivity {
     EditText etMail, etPass;
     Button btnLogin, btnNewUser, btnAgentLogin;
     ImageView logo;
+    TextView tvForgotPass;
     private FirebaseAuth mAuth;
     private DatabaseReference reference;
-    private static final String SHARED_PREF_NAME = "mypref";
-    private static final String KEY_NAME = "name";
     private int logoClickCount = 0;
     private Handler handlerLogo = new Handler();
     private static final int CLICK_RESET_TIME = 2000;
@@ -47,6 +48,7 @@ public class UserLoginActivity extends AppCompatActivity {
         btnNewUser = findViewById(R.id.btnNewUser);
         btnAgentLogin = findViewById(R.id.btnAgent);
         logo = findViewById(R.id.logo_user);
+        tvForgotPass = findViewById(R.id.tvUserForgotPassword);
 
         logo.setOnClickListener(v -> {
             logoClickCount++;
@@ -59,6 +61,8 @@ public class UserLoginActivity extends AppCompatActivity {
             }
             handlerLogo.postDelayed(() -> logoClickCount = 0, CLICK_RESET_TIME);
         });
+
+        tvForgotPass.setOnClickListener(v -> forgotPass());
 
         mAuth = FirebaseAuth.getInstance();
         reference = FirebaseDatabase.getInstance().getReference("Users");
@@ -97,8 +101,11 @@ public class UserLoginActivity extends AppCompatActivity {
         if (val.isEmpty()){
             etMail.setError("Invalid Email !");
             return false;
-        }
-        else {
+        } else if (!Patterns.EMAIL_ADDRESS.matcher(val).matches()) {
+            etMail.setError("Enter a valid email");
+            etMail.requestFocus();
+            return false;
+        } else {
             etMail.setError(null);
             return true;
         }
@@ -109,8 +116,7 @@ public class UserLoginActivity extends AppCompatActivity {
         if (val.isEmpty()){
             etPass.setError("Enter Password !");
             return false;
-        }
-        else {
+        } else {
             etPass.setError(null);
             return true;
         }
@@ -131,6 +137,30 @@ public class UserLoginActivity extends AppCompatActivity {
             } else
             {
                 Toast.makeText(UserLoginActivity.this, "Login unsuccessful", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    private void forgotPass()
+    {
+        String email = etMail.getText().toString().trim();
+
+        if (email.isEmpty())
+        {
+            etMail.setError("Enter Email Address !");
+        }
+
+        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches())
+        {
+            Toast.makeText(this, "Enter a valid email address", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        mAuth.sendPasswordResetEmail(email).addOnCompleteListener(task -> {
+            if (task.isSuccessful()) {
+                Toast.makeText(this, "The Password reset email has been sent to\n" + email, Toast.LENGTH_LONG).show();
+            } else {
+                Toast.makeText(this, "Error: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }

@@ -59,6 +59,18 @@
             android:inputType="textPassword"
             android:textSize="20sp"/>
 
+        <TextView
+            android:id="@+id/tvUserForgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="Forgot Password?"
+            android:textColor="@color/bg"
+            android:textSize="20sp" />
+
         <Button
             android:id="@+id/btnLogin"
             android:layout_width="match_parent"
@@ -85,7 +97,7 @@
             android:id="@+id/btnAgent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="70dp"
             android:layout_gravity="center"
             android:text="Delivery Agent ?"
             android:textStyle="bold"

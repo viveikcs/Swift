@@ -2,9 +2,11 @@ package com.example.swiftdelivery.agent;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -26,6 +28,7 @@ public class AgentLoginActivity extends AppCompatActivity {
 
     Button btnNewAgent, btnLogin, btnUser;
     EditText etAgentEmail, etAgentPassword;
+    TextView tvForgotPass;
     private FirebaseAuth mAuth;
     private DatabaseReference reference;
 
@@ -41,6 +44,7 @@ public class AgentLoginActivity extends AppCompatActivity {
         etAgentPassword = findViewById(R.id.etAgentLogPassword);
         btnLogin = findViewById(R.id.btnAgentLogin);
         btnUser = findViewById(R.id.btnUser);
+        tvForgotPass = findViewById(R.id.tvAgentForgotPassword);
 
         mAuth = FirebaseAuth.getInstance(); // Firebase Authentication
         reference = FirebaseDatabase.getInstance().getReference("Delivery Agents");
@@ -54,6 +58,8 @@ public class AgentLoginActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        tvForgotPass.setOnClickListener(v -> forgotPass());
 
         // Navigate to UserLoginActivity
         btnUser.setOnClickListener(new View.OnClickListener() {
@@ -121,6 +127,30 @@ public class AgentLoginActivity extends AppCompatActivity {
             } else
             {
                 Toast.makeText(AgentLoginActivity.this, "Login Unsuccessful.", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    private void forgotPass()
+    {
+        String email = etAgentEmail.getText().toString().trim();
+
+        if (email.isEmpty())
+        {
+            etAgentEmail.setError("Enter Email Address !");
+        }
+
+        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches())
+        {
+            Toast.makeText(this, "Enter a valid email address", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        mAuth.sendPasswordResetEmail(email).addOnCompleteListener(task -> {
+            if (task.isSuccessful()) {
+                Toast.makeText(this, "The Password reset email has been sent to\n" + email, Toast.LENGTH_LONG).show();
+            } else {
+                Toast.makeText(this, "Error: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }

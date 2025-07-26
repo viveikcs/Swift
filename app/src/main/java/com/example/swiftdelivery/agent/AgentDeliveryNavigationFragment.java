@@ -44,7 +44,6 @@ public class AgentDeliveryNavigationFragment extends Fragment{
     ImageButton btn_Chat;
     SlideToActView sliderPickedUp, sliderDelivered;
     private String agentId, deliveryId, currentDeliveryState;;
-    private LatLng pickupLatLng, deliveryLatLng, agentLatLng;
     private double pickupLat, pickupLong, deliveryLat, deliveryLong;
     private DatabaseReference reference;
     private FirebaseAuth mAuth;

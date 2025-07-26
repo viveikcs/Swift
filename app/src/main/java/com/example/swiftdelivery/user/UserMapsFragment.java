@@ -82,7 +82,7 @@ public class UserMapsFragment extends Fragment implements OnMapReadyCallback {
         }
 
         mMap.setMyLocationEnabled(true);
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(34.0522, -118.2437), 10));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(23.5797013, 58.3930057), 10));
 
         mMap.setOnMapClickListener(latLng -> {
             if (pickupLocation == null) {
@@ -113,7 +113,7 @@ public class UserMapsFragment extends Fragment implements OnMapReadyCallback {
                 dropoff_editor.putString("DROPOFF_LONG",String.valueOf(latLng.longitude));
                 dropoff_editor.apply();
                 tvDrop.setText("Delivery Address: "+dropoffAddress);
-                Toast.makeText(getContext(), "Drop-off location set!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Delivery location set!", Toast.LENGTH_SHORT).show();
                 mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 15));
             }
         });
