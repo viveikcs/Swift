@@ -59,11 +59,11 @@ Swift/
 
 ### **📸 SCREENSHOTS**
 
-![User Dashboard](screenshots/user_dashboard.jpg)
+![User Dashboard](screenshots/user_dashboard.png)
 ![Delivery Agent Dashboard](screenshots/agent_dashboard.png)
-![User Delivery Tracking](screenshots/user_tracking.jpg)
+![User Delivery Tracking](screenshots/user_tracking.png)
 ![Agent Route Navigation](screenshots/routenav.png)
-![Live Chat between User and Delivery Agent](screenshots/livechat.jpg)
+![Live Chat between User and Delivery Agent](screenshots/livechat.png)
 
 ### **🧩 Future Enhancements**
 
