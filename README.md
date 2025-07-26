@@ -4,7 +4,7 @@
 
 Swift is an android mobile application developed using Java in Android Studio. The app provides door-to-door package delivery service with Realtime delivery location tracking to its users. The app leverages modern Android development practices, a clean UI, and intuitive user experience.
 
-### ** 📱 FEATURES**
+### **📱 FEATURES**
 
 - User Authentication via Firebase
 - User Profile Management
@@ -16,7 +16,7 @@ Swift is an android mobile application developed using Java in Android Studio. T
 - Admin Features 
 - App Analytics
 
-### ** 🛠️ TOOLS**
+### **🛠️ TOOLS**
 
 - Android Studio
 - Java Programming
@@ -26,7 +26,7 @@ Swift is an android mobile application developed using Java in Android Studio. T
 - Material UI components
 - Model View Controller (MVC) architecture
 
-### ** 📁 PROJECT STRUCTURE**
+### **📁 PROJECT STRUCTURE**
 
 Swift/
 ├── app/
