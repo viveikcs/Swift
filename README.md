@@ -59,7 +59,7 @@ Swift/
 
 ### **📸 SCREENSHOTS**
 
-![User Dashboard](screenshots/user_dashboard.png)
+<img src="screenshots/user_dashboard.png" width="300" alt="User Dashboard">
 ![Delivery Agent Dashboard](screenshots/agent_dashboard.png)
 ![User Delivery Tracking](screenshots/user_tracking.png)
 ![Agent Route Navigation](screenshots/routenav.png)
