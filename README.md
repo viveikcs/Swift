@@ -28,27 +28,7 @@ Swift is an android mobile application developed using Java in Android Studio. T
 
 ### **📁 PROJECT STRUCTURE**
 
-Swift/
-└── app/
-    └── src/
-        └── main/
-            ├── java/
-            │   └── com.example.swift/
-            │       ├── admin/
-            │       ├── agent/
-            │       └── user/
-            │           └── *.java
-            ├── res/
-            │   ├── drawable/
-            │   ├── font/
-            │   ├── layout/
-            │   ├── menu/
-            │   ├── mipmap/
-            │   ├── raw/
-            │   └── values/
-            │       └── *.xml
-            ├── AndroidManifest.xml
-            └── build.gradle
+<img src="screenshots/proj_structure.png" width="300" alt="Project Structure">
 
 ### **🧪 HOW TO RUN THE APP**
 
