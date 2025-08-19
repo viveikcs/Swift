@@ -52,7 +52,7 @@ Swift is an android mobile application developed using Java in Android Studio. T
   <img src="screenshots/livechat.png" width="300" alt="Live Chat between User and Delivery Agent" />
 </p>
 
-### **🧩 Future Enhancements**
+### **🧩 FUTURE ENHANCEMENTS**
 
 - Add biometric login
 - Add in-built calling feature
@@ -60,9 +60,12 @@ Swift is an android mobile application developed using Java in Android Studio. T
 - Improve UI design and responsiveness
 - Optimize performance and background tasks
 
-### **🙏🏼 Acknowledgements**
+### **🙏🏼 ACKNOWLEDGEMENTS**
 
 - Android Developers Documentation
 - Firebase by Google
 - Google APIs
 - Community resources and open-source libraries
+
+### **📨 CONTACT**
+Feel free to reach out: viveikcs@gmail.com
